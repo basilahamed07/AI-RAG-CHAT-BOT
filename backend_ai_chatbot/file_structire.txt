@@ -1,0 +1,11 @@
+rag_ai_project/
+│
+├── app.py                # Entry point for the Flask app (runs the app)
+├── models.py             # AI-related processing (including LangChain setup)
+├── routes.py             # Define Flask routes
+├── ai_processing/        # Folder for AI processing related files
+│   ├── __init__.py
+│   ├── rag_chain.py      # Define the retrieval-augmented generation logic
+│   ├── vector_store.py   # Handle vector store and document embedding
+├── requirements.txt      # List of required dependencies
+└── config.py             # Configuration (e.g., API keys, paths)
