@@ -1,0 +1,22 @@
+Gender,Invoice ID,Branch,City,Customer type,Product line,Unit price,Quantity,Tax 5%
+Female,750-67-8428,A,Yangon,Member,Health and beauty,74.69,7,261.415
+Female,226-31-3081,C,Naypyitaw,Normal,Electronic accessories,15.28,5,3.82
+Female,355-53-5943,A,Yangon,Member,Electronic accessories,68.84,6,20.652
+Female,315-22-5665,C,Naypyitaw,Normal,Home and lifestyle,73.56,10,36.78
+Female,665-32-9167,A,Yangon,Member,Health and beauty,36.26,2,3.626
+Female,692-92-5582,B,Mandalay,Member,Food and beverages,54.84,3,8.226
+Female,351-62-0822,B,Mandalay,Member,Fashion accessories,14.48,4,2.896
+Female,365-64-0515,A,Yangon,Normal,Electronic accessories,46.95,5,11.7375
+Female,829-34-3910,A,Yangon,Normal,Health and beauty,71.38,10,35.69
+Male,728-47-9078,C,Naypyitaw,Member,Food and beverages,59.59,4,11.918
+Male,809-46-1866,A,Yangon,Normal,Health and beauty,58.15,4,11.63
+Male,148-41-7930,C,Naypyitaw,Normal,Health and beauty,99.96,7,34.986
+Male,189-40-5216,C,Naypyitaw,Normal,Electronic accessories,96.37,7,337.295
+Male,552-44-5977,B,Mandalay,Member,Health and beauty,62,8,24.8
+Male,267-62-7380,C,Naypyitaw,Member,Electronic accessories,82.34,10,41.17
+Male,430-53-4718,B,Mandalay,Member,Health and beauty,75.37,8,30.148
+Male,745-74-0715,A,Yangon,Normal,Electronic accessories,58.03,2,5.803
+Male,690-01-6631,B,Mandalay,Normal,Fashion accessories,17.49,10,8.745
+Male,233-67-5758,C,Naypyitaw,Normal,Health and beauty,40.35,1,2.0175
+Male,727-02-1313,A,Yangon,Member,Food and beverages,31.84,1,1.592
+Male,347-56-2442,A,Yangon,Normal,Home and lifestyle,65.82,1,3.291

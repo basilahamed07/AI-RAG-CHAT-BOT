@@ -3,7 +3,7 @@ from flask import Flask, jsonify, request, render_template, redirect, url_for, s
 from flask_cors import CORS
 from dotenv import load_dotenv
 from models import db
-from backend_ai_chatbot.router1 import register_routes
+from test_files.router1 import register_routes
 from flask_migrate import Migrate
 from werkzeug.utils import secure_filename
 from flask_jwt_extended import JWTManager, jwt_required, get_jwt_identity

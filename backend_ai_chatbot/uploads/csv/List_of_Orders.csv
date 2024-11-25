@@ -1,0 +1,99 @@
+Order ID,Order Date,CustomerName,State,City
+B-25601,01-04-2018,Bharat,Gujarat,Ahmedabad
+B-25602,01-04-2018,Pearl,Maharashtra,Pune
+B-25603,03-04-2018,Jahan,Madhya Pradesh,Bhopal
+B-25604,03-04-2018,Divsha,Rajasthan,Jaipur
+B-25605,05-04-2018,Kasheen,West Bengal,Kolkata
+B-25606,06-04-2018,Hazel,Karnataka,Bangalore
+B-25607,06-04-2018,Sonakshi,Jammu and Kashmir,Kashmir
+B-25608,08-04-2018,Aarushi,Tamil Nadu,Chennai
+B-25609,09-04-2018,Jitesh,Uttar Pradesh,Lucknow
+B-25610,09-04-2018,Yogesh,Bihar,Patna
+B-25611,11-04-2018,Anita,Kerala ,Thiruvananthapuram
+B-25612,12-04-2018,Shrichand,Punjab,Chandigarh
+B-25613,12-04-2018,Mukesh,Haryana,Chandigarh
+B-25614,13-04-2018,Vandana,Himachal Pradesh,Simla
+B-25615,15-04-2018,Bhavna,Sikkim,Gangtok
+B-25616,15-04-2018,Kanak,Goa,Goa
+B-25617,17-04-2018,Sagar,Nagaland,Kohima
+B-25618,18-04-2018,Manju,Andhra Pradesh,Hyderabad
+B-25619,18-04-2018,Ramesh,Gujarat,Ahmedabad
+B-25620,20-04-2018,Sarita,Maharashtra,Pune
+B-25621,20-04-2018,Deepak,Madhya Pradesh,Bhopal
+B-25622,22-04-2018,Monisha,Rajasthan,Jaipur
+B-25623,22-04-2018,Atharv,West Bengal,Kolkata
+B-25624,22-04-2018,Vini,Karnataka,Bangalore
+B-25625,23-04-2018,Pinky,Jammu and Kashmir,Kashmir
+B-25626,23-04-2018,Bhishm,Maharashtra,Mumbai
+B-25627,23-04-2018,Hitika,Madhya Pradesh,Indore
+B-25628,24-04-2018,Pooja,Bihar,Patna
+B-25629,24-04-2018,Hemant,Kerala ,Thiruvananthapuram
+B-25630,24-04-2018,Sahil,Punjab,Chandigarh
+B-25631,24-04-2018,Ritu,Haryana,Chandigarh
+B-25632,25-04-2018,Manish,Himachal Pradesh,Simla
+B-25633,26-04-2018,Amit,Sikkim,Gangtok
+B-25634,26-04-2018,Sanjay,Goa,Goa
+B-25635,26-04-2018,Nidhi,Nagaland,Kohima
+B-25636,26-04-2018,Nishi,Maharashtra,Mumbai
+B-25637,26-04-2018,Ashmi,Madhya Pradesh,Indore
+B-25638,26-04-2018,Parth,Maharashtra,Pune
+B-25639,27-04-2018,Lisha,Madhya Pradesh,Bhopal
+B-25640,27-04-2018,Paridhi,Rajasthan,Jaipur
+B-25641,27-04-2018,Parishi,West Bengal,Kolkata
+B-25642,28-04-2018,Ajay,Karnataka,Bangalore
+B-25643,29-04-2018,Kirti,Jammu and Kashmir,Kashmir
+B-25644,30-04-2018,Mayank,Maharashtra,Mumbai
+B-25645,01-05-2018,Yaanvi,Madhya Pradesh,Indore
+B-25646,01-05-2018,Sonal,Bihar,Patna
+B-25647,03-05-2018,Sharda,Kerala ,Thiruvananthapuram
+B-25648,04-05-2018,Aditya,Punjab,Chandigarh
+B-25649,05-05-2018,Rachna,Haryana,Chandigarh
+B-25650,06-05-2018,Chirag,Maharashtra,Mumbai
+B-25651,07-05-2018,Anurag,Madhya Pradesh,Indore
+B-25652,08-05-2018,Tushina,Goa,Goa
+B-25653,08-05-2018,Farah,Nagaland,Kohima
+B-25654,10-05-2018,Sabah,Maharashtra,Mumbai
+B-25655,11-05-2018,Nida,Madhya Pradesh,Indore
+B-25656,11-05-2018,Priyanka,Maharashtra,Pune
+B-25657,13-05-2018,Tulika,Madhya Pradesh,Bhopal
+B-25658,14-05-2018,Shefali,Rajasthan,Jaipur
+B-25659,15-05-2018,Sanskriti,West Bengal,Kolkata
+B-25660,16-05-2018,Shruti,Karnataka,Bangalore
+B-25661,17-05-2018,Subhashree,Jammu and Kashmir,Kashmir
+B-25662,17-05-2018,Sweta,Maharashtra,Mumbai
+B-25663,19-05-2018,Pournamasi,Madhya Pradesh,Indore
+B-25664,20-05-2018,Pratyusmita,Bihar,Patna
+B-25665,21-05-2018,Chayanika,Kerala ,Thiruvananthapuram
+B-25666,22-05-2018,Tanvi,Punjab,Chandigarh
+B-25667,23-05-2018,Anjali,Haryana,Chandigarh
+B-25668,24-05-2018,Rhea,Himachal Pradesh,Simla
+B-25669,25-05-2018,Piyali,Sikkim,Gangtok
+B-25670,25-05-2018,Charika,Goa,Goa
+B-25671,27-05-2018,Mitali,Nagaland,Kohima
+B-25672,28-05-2018,Akanksha,Andhra Pradesh,Hyderabad
+B-25673,28-05-2018,Arsheen,Gujarat,Ahmedabad
+B-25674,28-05-2018,Mahima,Maharashtra,Pune
+B-25675,31-05-2018,Shreya,Madhya Pradesh,Bhopal
+B-25676,01-06-2018,Chandni,Rajasthan,Jaipur
+B-25677,02-06-2018,Ekta,West Bengal,Kolkata
+B-25678,03-06-2018,Bathina,Karnataka,Bangalore
+B-25679,04-06-2018,Avni,Maharashtra,Mumbai
+B-25680,04-06-2018,Aayushi,Madhya Pradesh,Indore
+B-25681,04-06-2018,Bhawna,Madhya Pradesh,Indore
+B-25682,07-06-2018,Krutika,Bihar,Patna
+B-25683,08-06-2018,Shreya,Kerala ,Thiruvananthapuram
+B-25684,09-06-2018,Samiksha,Maharashtra,Mumbai
+B-25685,10-06-2018,Sheetal,Madhya Pradesh,Indore
+B-25686,11-06-2018,Pooja,Himachal Pradesh,Simla
+B-25687,11-06-2018,Sanjna,Maharashtra,Mumbai
+B-25688,11-06-2018,Swetha,Madhya Pradesh,Indore
+B-25689,14-06-2018,Bhaggyasree,Maharashtra,Mumbai
+B-25690,15-06-2018,Gunjan,Madhya Pradesh,Indore
+B-25691,16-06-2018,Akancha,Maharashtra,Mumbai
+B-25692,17-06-2018,Rashmi,Madhya Pradesh,Indore
+B-25693,18-06-2018,Parna,Madhya Pradesh,Bhopal
+B-25694,18-06-2018,Subhasmita,Rajasthan,Jaipur
+B-25695,18-06-2018,Suhani,West Bengal,Kolkata
+B-25696,21-06-2018,Noopur,Karnataka,Bangalore
+B-25697,22-06-2018,Vijay,Jammu and Kashmir,Kashmir
+B-25698,23-06-2018,Amisha,Tamil Nadu,Chennai
