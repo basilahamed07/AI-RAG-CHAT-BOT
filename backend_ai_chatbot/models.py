@@ -16,6 +16,24 @@ class User(db.Model):
             'username': self.username,
             'positions': self.positions,
         }
+    
+class chat_bot(db.Model):
+    __tablename__ = 'chat_bot'
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    bot_name = db.Column(db.String(100), unique=True, nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
+    users = db.relationship('User', backref=db.backref('chat_bot', lazy=True))
+    file_id = db.Column(db.Integer, db.ForeignKey('file_details.id'), nullable=False)  # Foreign key to File
+    file_details = db.relationship('File', backref=db.backref('chat_bot', lazy=True)) 
+    # positions = db.Column(db.String(10), nullable=False, default='normal')
+
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'bot_name': self.bot_name,
+            'user_id': self.user_id,
+            "file_id":self.file_id
+        }
 
 class File(db.Model):
     __tablename__ = 'file_details'

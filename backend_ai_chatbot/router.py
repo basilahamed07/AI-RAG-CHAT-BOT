@@ -1,6 +1,6 @@
 from flask import jsonify, request, send_file,render_template,redirect, url_for, send_from_directory
 from werkzeug.security import generate_password_hash, check_password_hash
-from models import AI_info,User,File,db
+from models import AI_info,User,File,db,chat_bot
 from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity
 import os
 from werkzeug.utils import secure_filename
@@ -88,6 +88,7 @@ def register_routes(app):
     def bot_create():
         if request.method == 'POST':
             print("inside")
+
             # Check if the file is in the request
             if 'file' not in request.files:
                 return 'No file part', 400
@@ -108,10 +109,15 @@ def register_routes(app):
 
             # If the file is allowed, process it
             if file and allowed_file(file.filename):
-                print("check the file extansion")
+                print("check the file extension")
                 filename = secure_filename(file.filename)
                 file_type = file.mimetype
                 user_id = get_jwt_identity()  # Ensure that user_id is available in the request context
+
+                # Get the bot_name from the request data (ensure it's being sent by the client)
+                bot_name = request.form.get('bot_name', None)
+                if not bot_name:
+                    return 'Bot name is required', 400
 
                 # Set the upload path
                 upload_path = os.path.join(app.config['csv_file'], filename)
@@ -123,17 +129,12 @@ def register_routes(app):
                 # Save the file to the specified path
                 file.save(upload_path)
 
-                # # Check if the file is empty
-                # if os.path.getsize(upload_path) == 0:
-                #     return 'Uploaded file is empty. Please upload a valid file.', 400
-
                 print(f"File saved successfully to {upload_path}")
 
                 # If the file is a CSV, process it
-                
                 print(file_type)
                 if file_type == 'text/csv':
-                    chunked = csv_documet_load(upload_path)
+                    chunked = csv_documet_load(upload_path)  # Ensure this function works as expected
                     print(f"Extracted chunks: {chunked}")
                     print(f"Number of chunks: {len(chunked)}")
 
@@ -151,8 +152,20 @@ def register_routes(app):
                     db.session.add(new_file)
                     db.session.commit()
 
+                    # Fetch the newly added file's ID
+                    file_id = File.query.filter_by(filename=filename).first()
+
+                    # Create the bot using the provided bot_name
+                    new_chatbot = chat_bot(
+                        bot_name=bot_name,
+                        user_id=user_id,
+                        file_id=file_id.id  # Assuming `file_id` is a foreign key reference
+                    )
+                    db.session.add(new_chatbot)
+                    db.session.commit()
+
                     print(f"File record added to database: {new_file}")
-                    return "File uploaded successfully", 200
+                    return "File uploaded and bot created successfully", 200
 
                 else:
                     return "Invalid file type. Only CSV files are allowed.", 400
@@ -200,3 +213,28 @@ def register_routes(app):
                 return jsonify({'response': "No file ID provided."})
 
         return "error", 401
+
+    @app.route('/chat/history', methods=['GET'])
+    @jwt_required()
+    def get_chat_history():
+        user_id = get_jwt_identity()  # Get the current user's ID from JWT
+        file_id = request.args.get('file_id', type=int)  # Get the file_id from query params
+
+        # Build the query to filter by both user_id and optionally file_id
+        if file_id:  # If file_id is provided, filter by file_id
+            history = AI_info.query.filter_by(user_id=user_id, file_id=file_id).all()
+        else:  # If no file_id, return all history for the user
+            history = AI_info.query.filter_by(user_id=user_id).all()
+
+        # Prepare the history data to include the question, answer, and file_id
+        history_data = [{'question': h.questions} for h in history]
+
+        return jsonify({'history': history_data})
+    
+    @app.route('/bots', methods=['GET'])
+    @jwt_required()
+    def get_bot():
+        user_id = get_jwt_identity()  # Get the current user
+        bots = chat_bot.query.filter_by(user_id=user_id).all()
+        bots_report = [{'bot_name': b.bot_name, "file_id": b.file_id} for b in bots]
+        return jsonify({'history':bots_report})

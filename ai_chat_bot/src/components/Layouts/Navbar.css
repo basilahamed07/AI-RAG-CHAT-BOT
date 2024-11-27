@@ -1,0 +1,81 @@
+/* Glossy Navigation Bar with Left, Right, and Top Spacing */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space out the logo and links */
+    align-items: center;
+    padding: 20px 30px;
+    background-color: rgba(240, 248, 255, 0.9); /* Light background (light blue) */
+    backdrop-filter: blur(10px); /* Subtle blur effect */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Lighter shadow for contrast */
+    position: fixed;
+    width: auto; /* Make navbar width auto based on its content */
+    top: 50px; /* Space from the top of the page */
+    left: 50%; /* Center the navbar horizontally */
+    transform: translateX(-50%); /* Adjust to truly center the navbar */
+    z-index: 100;
+    border-radius: 20px; /* Rounded corners */
+    overflow: hidden; /* Keeps the rounded corners neat */
+    transition: background-color 0.3s ease-in-out; /* Smooth background color transition */
+}
+
+.navbar .logo {
+    font-size: 32px;
+    font-weight: 700;
+    color: #003366; /* Dark blue text for logo */
+    letter-spacing: 1px; /* Slight letter-spacing for a more modern feel */
+    text-transform: uppercase; /* All caps for a more formal look */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #003366; /* Dark blue text color for links */
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth color and transform transitions */
+    padding: 5px 0;
+}
+
+.nav-links a:hover {
+    color: #00d4ff; /* Light cyan color for hover effect */
+    transform: scale(1.1); /* Slight scaling effect to make the link more interactive */
+    border-bottom: 2px solid #00d4ff; /* Adds a cyan underline on hover */
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px 20px;
+        top: 50px;
+        left: 50%; /* Center the navbar horizontally */
+        transform: translateX(-50%); /* Adjust to truly center the navbar */
+        width: auto; /* Make the navbar width auto in smaller screens */
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .nav-links li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .logo {
+        margin-bottom: 20px;
+    }
+}
+    

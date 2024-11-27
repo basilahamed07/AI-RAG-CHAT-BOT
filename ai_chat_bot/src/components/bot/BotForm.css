@@ -1,0 +1,141 @@
+/* BotForm.css */
+
+/* Container for the entire component */
+.bot-form-container {
+    padding: 40px;
+    background-color: #f0f8ff; /* Light blue background for the blue theme */
+    border-radius: 10px;
+    width: 70%;
+    margin: 40px auto;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .options-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+  }
+  
+  button {
+    padding: 16px 40px;  /* Increase padding to make buttons bigger */
+    margin: 12px;
+    cursor: pointer;
+    background-color: #007bff;  /* Blue button background */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px; /* Increase font size */
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3); /* Add a subtle blue shadow */
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.1); /* Slightly increase size on hover */
+    box-shadow: 0 6px 12px rgba(0, 86, 179, 0.3); /* Add stronger shadow */
+  }
+  
+  button.active-btn {
+    background-color: #004085; /* Darker blue when active */
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Darker background overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+    cursor: pointer; /* Allows closing by clicking anywhere outside the modal */
+  }
+  
+  .modal-content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 60%;
+    max-width: 600px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.3s ease;
+    position: relative; /* Allows modal content to be placed correctly within the overlay */
+    cursor: auto; /* Prevents the modal from closing when clicking inside */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(-50px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  h3 {
+    color: #007bff; /* Blue color for headings */
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  form div {
+    margin-bottom: 20px;
+    width: 80%;
+  }
+  
+  input[type="text"],
+  input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="text"]:focus,
+  input[type="file"]:focus {
+    border-color: #0056b3; /* Focused input field border color */
+    outline: none;
+  }
+  
+  button[type="submit"] {
+    margin-top: 10px;
+    padding: 14px 36px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Add some margin for the modal content */
+  .bot-option {
+    margin: 0;
+  }
+  
