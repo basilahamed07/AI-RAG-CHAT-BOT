@@ -1,4 +1,4 @@
-from flask import jsonify, request, send_file,render_template,redirect, url_for, send_from_directory
+from flask import jsonify, request
 from werkzeug.security import generate_password_hash, check_password_hash
 from models import AI_info,User,File,db,chat_bot
 from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity
@@ -6,7 +6,7 @@ import os
 from werkzeug.utils import secure_filename
 # jwd authondictions functins:
 # from app import allowed_file
-from ai_processing.preprocessing_files import load_pdf_doc_split, embadding_and_store,csv_documet_load
+from ai_processing.preprocessing_files import embadding_and_store,csv_documet_load
 from ai_processing.generate_answer_ai import get_result, generate_answer
 # Assuming you have a function to fetch file details by filename or index_id
 def get_file_details(file_id):
@@ -102,14 +102,14 @@ def register_routes(app):
 
             # Define the allowed file check function
             def allowed_file(filename):
-                print(filename)
-                print('.' in filename and filename.rsplit('.', 1)[1].lower())
-                print('.' in filename and filename.rsplit('.', 1)[1].lower() in app.config['ALLOWED_EXTENSIONS'])
+                # print(filename)
+                # print('.' in filename and filename.rsplit('.', 1)[1].lower())
+                # print('.' in filename and filename.rsplit('.', 1)[1].lower() in app.config['ALLOWED_EXTENSIONS'])
                 return '.' in filename and filename.rsplit('.', 1)[1].lower() in app.config['ALLOWED_EXTENSIONS']
 
             # If the file is allowed, process it
             if file and allowed_file(file.filename):
-                print("check the file extension")
+                # print("check the file extension")
                 filename = secure_filename(file.filename)
                 file_type = file.mimetype
                 user_id = get_jwt_identity()  # Ensure that user_id is available in the request context
@@ -139,7 +139,7 @@ def register_routes(app):
                     print(f"Number of chunks: {len(chunked)}")
 
                     # Embedding and storing the file (ensure the function works as expected)
-                    embedding_path = embadding_and_store(chuked=chunked, file_name=filename)
+                    embedding_path = embadding_and_store(chuked=chunked, file_name=filename,bot_name=bot_name)
 
                     # Create a new File record and add it to the database
                     new_file = File(
@@ -169,7 +169,8 @@ def register_routes(app):
 
                 else:
                     return "Invalid file type. Only CSV files are allowed.", 400
-
+            
+            return "Invalid file type. Only CSV files are allowed.", 400
         return "Good request", 200
 
             # return render_template('upload.html')

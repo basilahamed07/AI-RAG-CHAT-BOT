@@ -11,6 +11,8 @@ from langchain_community.document_loaders import PyMuPDFLoader
 from langchain_community.document_loaders.csv_loader import CSVLoader
 partent_director_index = "test_files/uploads/index"
 
+
+
 def csv_documet_load(file_path):
     loader = CSVLoader(file_path)
     data = loader.load_and_split()
@@ -28,7 +30,7 @@ def load_pdf_doc_split(file_path):
     return data
 
 
-def embadding_and_store(chuked,file_name):
+def embadding_and_store(chuked,file_name,bot_name):
     # for example i am takeing the google embadding for this 
     model_name = "models/embedding-001"
     api_key = "AIzaSyBrbZofGPedoqwIoy1NaLfjiE_0MrOvY9I"
@@ -38,6 +40,7 @@ def embadding_and_store(chuked,file_name):
         os.makedirs("./uploads/csv/index")
     # path = os.path.join(partent_director_index,file_name)
     # os.makedirs(path)
-    path = f"./uploads/csv/index/{file_name}"
+    
+    path = f"./uploads/csv/index/{bot_name}"
     store_data = db.save_local(path)
     return path 
